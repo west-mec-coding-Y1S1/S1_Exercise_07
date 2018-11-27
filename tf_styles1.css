@@ -164,7 +164,7 @@ ul.submenu:hover {
    ============================
 */
 @media only screen and (max-width: 480px) {
-    .horizontal a {
+    nav.horizontal a {
         font-size: 1.5em;
         line-height: 2.2em;
     }
@@ -179,16 +179,16 @@ ul.submenu:hover {
    =================================
 */
 @media only screen and (min-width: 481px) {
-    .mainmenu>li {
+    ul.mainmenu>li {
         float: left;
         width: 20%;
         position: relative;
     }
 
-    .submenu {
+    ul.submenu {
         box-shadow: rgb(51, 51, 51) 5px 5px 15px;
         position: absolute;
-        width: 20%;
+        width: 200%;
     }
 }
 
@@ -197,11 +197,32 @@ ul.submenu:hover {
    =================================
 */
 @media only screen and (min-width: 769px) {
-    .submenu {
+    ul.submenu {
         background: transparent;
         box-shadow: none;
         display: block;
         position: relative;
         width: 100%;
+    }
+
+    nav.horizontal::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    nav.horizontal a.submenuTitle {
+        display: none;
+    }
+
+    article {
+        float: left;
+        margin-right: 5%;
+        width: 55%;
+    }
+
+    aside {
+        float: left;
+        width: 40%;
     }
 }
